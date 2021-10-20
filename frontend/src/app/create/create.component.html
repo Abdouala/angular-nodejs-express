@@ -1,0 +1,15 @@
+<div class="container">
+  <br>
+  <form [formGroup] = "userForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <input type="text" class="form-control" formControlName="fullname" placeholder="Enter FullName">
+    </div>
+    <div class="mb-3">
+      <input type="email" class="form-control" formControlName="email" placeholder="Enter Email">
+    </div>
+    <div class="mb-3">
+      <input type="phone" class="form-control" formControlName="mobile" placeholder="Enter Mobile Phone">
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+  </form>
+</div>

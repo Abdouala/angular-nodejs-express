@@ -62,7 +62,7 @@ app.get('/users', function(req, res){
     let sql = 'SELECT * FROM users';
     db.query(sql, function (error, results, fields) {
         if (error) throw error;
-        return res.send({ error: false, data: results, message: 'users list.' });
+        return res.send(results);
     })
 })
 
