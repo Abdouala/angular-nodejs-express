@@ -74,7 +74,8 @@ app.get('/user/:id', function(req, res){
     db.query(sql, function (error, results, fields) {
         if (error) throw error;
         if(results.length <= 0) return res.send({message: 'data not found'})
-        return res.send({ error: false, data: results, message: 'users list.' });
+        return res.send({ data:results });
+        //return res.send({ results });
     });
 })
 

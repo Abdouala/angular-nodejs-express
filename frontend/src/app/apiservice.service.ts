@@ -23,4 +23,23 @@ export class ApiserviceService {
     return this.http.post(this.postapiUrl, data)
   }
 
+  // Delete data
+  deleteData(id:any): Observable<any> {
+    const url = `${this.postapiUrl}/${id}`;
+    return this.http.delete(url)
+  }
+
+  // Get single data
+  getSingleData(id:any):Observable<any> {
+    const url = `${this.postapiUrl}/${id}`;
+    return this.http.get<any>(url);
+  }
+
+  // Update data
+  updateData(id:any, data:any) {
+    const url = `${this.postapiUrl}/${id}`;
+    return this.http.put(url, data)
+  }
+
+
 }

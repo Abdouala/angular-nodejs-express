@@ -24,4 +24,15 @@ export class ReadComponent implements OnInit {
       })
   }
 
+  deleteUser(id: any) {
+    //console.log(id, 'Deleted !')
+    this.apiService.deleteData(id)
+      .subscribe(
+        (response) => {
+          console.log(response);
+          this.getAllData()
+        }
+      )
+  }
+
 }
